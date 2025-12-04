@@ -1,0 +1,36 @@
+project:
+  debug: false
+
+pots: 
+  - id: 1
+    moisture_min: 25
+    moisture_max: 65
+
+  - id: 2
+    moisture_min: 25
+    moisture_max: 65
+
+  - id: 3
+    moisture_min: 25
+    moisture_max: 65
+
+  - id: 4
+    moisture_min: 25
+    moisture_max: 65
+
+  - id: 5
+    moisture_min: 25
+    moisture_max: 65
+
+outlets:
+  - id: "PUMP_NUTRIENT"
+    ip: ""
+
+  - id: "PUMP_WATER"
+    ip: ""
+
+  - id: "OUTLET_PANEL_1"
+    ip: ""
+
+  - id: "OUTLET_PANEL_2"
+    ip: ""

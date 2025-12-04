@@ -1,0 +1,96 @@
+project:
+    name: "Greenhouse Automation"
+    debug: true
+
+pots:
+  - id: 1
+    name: "Tomaten 1"
+    soil_sensor_id: "SOIL_1"
+    moisture_min: 30
+    moisture_max: 70
+    max_watering_per_day_ml: 500
+
+  - id: 2
+    name: "Tomaten 2"
+    soil_sensor_id: "SOIL_2"
+    moisture_min: 30
+    moisture_max: 70
+    max_watering_per_day_ml: 500
+
+  - id: 3
+    name: "Kräuter 1"
+    soil_sensor_id: "SOIL_3"
+    moisture_min: 30
+    moisture_max: 70
+    max_watering_per_day_ml: 400
+
+  - id: 4
+    name: "Trauben"
+    soil_sensor_id: "SOIL_4"
+    moisture_max: 30
+    moisture_min: 60
+    max_watering_per_day_ml: 500
+
+  - id: 5
+    name: "Paprika"
+    soil_sensor_id: "SOIL_5"
+    moisture_min: 30
+    moisture_max: 70
+    max_watering_per_day_ml: 500
+
+water_tanks:
+  - id: "TANK_WATER"
+    name: "Frischwasser"
+    pump_id: "PUMP_WATER"
+    ph_min: 5.8
+    ph_max: 6.5
+
+  - id: "TANK_NUTRIENT"
+    name: "Nährlösung"
+    pump_id: "PUMP_NUTRIENT"
+    ph_sensor_id: "PH_NUTRIENT"
+    ph_min: 5.8
+    ph_max: 6.5
+    nutrient_use_interval_days: 7
+
+sensors:
+  soil:
+    - id: "SOIL_1"
+      adc_channel: 0
+      calibration_dry: 20000
+      calibration_wet: 8000
+
+    - id: "SOIL_2"
+      adc_channel: 1
+      calibration_dry: 20000
+      calibration_wet: 8000
+
+    - id: "SOIL_3"
+      adc_channel: 2
+      calibration_dry: 20000
+      calibration_wet: 8000
+
+    - id: "SOIL_4"
+      adc_channel: 3
+      calibration_dry: 20000
+      calibration_wet: 8000
+
+    - id: "SOIL_5"
+      adc_channel: 4
+      calibration_dry: 20000
+      calibration_wet: 8000
+
+climate:
+lighting:
+  panels:
+    - id: "PANEL_1"
+      outled_id: "OUTLET_PANEL_1"
+      allowed_start_hour: 7
+      allowed_end_hour: 22
+      max_hours_per_day: 16
+
+    - id: "PANEL_2"
+      outled_id: "OUTLET_PANEL_2"
+      allowed_start_hour: 7
+      allowed_end_hour: 22
+      max_hours_per_day: 16 
